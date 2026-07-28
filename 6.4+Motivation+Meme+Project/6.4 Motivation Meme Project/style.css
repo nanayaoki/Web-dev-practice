@@ -1,0 +1,22 @@
+html{
+    background-color: black;
+    color: white;
+}
+
+.set{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 115px;
+}
+
+p,h1{
+    text-align: center;
+}
+
+img{
+    border: 5px solid white;
+}   
+
+p{
+    font-size: 20px;
+}
