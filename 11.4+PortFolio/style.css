@@ -1,4 +1,239 @@
-body{
-    background-color: #dddbbb;
-    font-family: 'Times New Roman', Times, serif;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ddddbb;
+  color: #282932;
+}
+
+section {
+  padding: 4rem 8%;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 2.6rem;
+  margin: 0 0 2.5rem;
+  color: #0d0d0b;
+}
+
+/* ---------- Hero ---------- */
+
+section:first-of-type {
+  display: flex;
+  align-items: stretch;
+  min-height: 100vh;
+  padding: 0;
+}
+
+.name {
+  flex: 1 1 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 6% 0 8%;
+}
+
+.name h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 4.75rem;
+  line-height: 1.05;
+  color: #282932;
+  margin: 0 0 1.75rem;
+}
+
+.name p {
+  font-size: 1.05rem;
+  letter-spacing: 0.3px;
+  color: #52524a;
+  margin: 0;
+}
+
+.image {
+  flex: 1 1 45%;
+  width: 45%;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---------- About Me ---------- */
+
+.card-group {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 0;
+  min-width: 240px;
+  background-color: #c9a100;
+  border: none;
+  border-radius: 22px;
+  box-shadow: none;
+}
+
+.card-body {
+  padding: 2rem 1.75rem;
+  text-align: center;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #0d0d0b;
+  margin-bottom: 1.5rem;
+}
+
+.card-title img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.card-text {
+  font-size: 1.05rem;
+  color: #0d0d0b;
+}
+
+.card-text ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card-text ol li {
+  margin-bottom: 0.4rem;
+}
+
+/* ---------- Projects ---------- */
+
+.project {
+  background: linear-gradient(135deg, #fff6ae 0%, #ffabf7 100%);
+  border-radius: 40px;
+  padding: 1.1rem 2rem;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.project p {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #2b2b2b;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+/* ---------- Contact Me ---------- */
+
+section:last-of-type > div {
+  display: flex;
+  align-items: center;
+  gap: 6%;
+  flex-wrap: wrap;
+}
+
+section:last-of-type img[alt="mail"] {
+  width: 260px;
+  flex: 0 0 auto;
+}
+
+section:last-of-type form {
+  flex: 1 1 380px;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+  color: #282932;
+}
+
+.form-control {
+  width: 100%;
+  background-color: #c8d1d9;
+  border: none;
+  border-radius: 22px;
+  padding: 0.7rem 1.2rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: #282932;
+}
+
+.form-control::placeholder {
+  color: #5a636b;
+}
+
+textarea.form-control {
+  border-radius: 22px;
+  resize: vertical;
+  min-height: 110px;
+}
+
+.form-control:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.15);
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+footer img {
+  width: 32px;
+  height: 32px;
+}
+
+footer p {
+  margin: 0;
+  color: #999;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+  section:first-of-type {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .name,
+  .image {
+    width: 100%;
+    flex: none;
+  }
+
+  .name {
+    padding: 3rem 8%;
+  }
+
+  .image {
+    height: 45vh;
+  }
+
+  .card-group {
+    flex-direction: column;
+  }
+
+  section:last-of-type > div {
+    flex-direction: column;
+  }
 }
