@@ -1,3 +1,4 @@
 *.zip
 *.pdf
-*.exenode_modules/
+*.exe
+**/node_modules/
