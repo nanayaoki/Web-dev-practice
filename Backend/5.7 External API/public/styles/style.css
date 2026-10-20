@@ -1,0 +1,110 @@
+:root {
+    color-scheme: light;
+    --ink: #20243a;
+    --muted: #6d7187;
+    --accent: #f36b4f;
+    --accent-dark: #d9523d;
+    --card: rgba(255, 255, 255, 0.88);
+    --shadow: 0 24px 70px rgba(74, 45, 92, 0.16);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    align-items: center;
+    background:
+        radial-gradient(circle at 15% 15%, rgba(255, 202, 116, 0.65), transparent 28%),
+        radial-gradient(circle at 90% 85%, rgba(164, 151, 255, 0.48), transparent 32%),
+        linear-gradient(135deg, #fff8ee 0%, #f5efff 100%);
+    color: var(--ink);
+    display: flex;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh;
+    padding: 24px;
+}
+
+main {
+    max-width: 680px;
+    width: 100%;
+}
+
+.joke-card {
+    background: var(--card);
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    border-radius: 28px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    padding: clamp(32px, 7vw, 64px);
+    position: relative;
+    text-align: center;
+}
+
+.joke-card::before {
+    background: var(--accent);
+    border-radius: 50%;
+    content: "";
+    height: 110px;
+    position: absolute;
+    right: -46px;
+    top: -46px;
+    width: 110px;
+}
+
+.eyebrow {
+    color: var(--accent-dark);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    margin: 0 0 12px;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: clamp(2.25rem, 7vw, 4.25rem);
+    letter-spacing: -0.06em;
+    line-height: 0.98;
+    margin: 0;
+}
+
+.intro {
+    color: var(--muted);
+    font-size: 1.05rem;
+    margin: 18px auto 40px;
+    max-width: 390px;
+}
+
+.joke {
+    background: #fff;
+    border-left: 5px solid var(--accent);
+    border-radius: 14px;
+    box-shadow: 0 10px 28px rgba(74, 45, 92, 0.08);
+    margin: 0;
+    padding: 24px;
+    text-align: left;
+}
+
+.joke p {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.delivery {
+    color: var(--accent-dark);
+    font-weight: 700;
+    margin-top: 16px !important;
+}
+
+@media (max-width: 480px) {
+    .joke-card {
+        border-radius: 22px;
+    }
+
+    .joke {
+        padding: 20px;
+    }
+}
